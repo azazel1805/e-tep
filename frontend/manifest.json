@@ -1,0 +1,21 @@
+{
+  "name": "e-TEP Exam Simulator",
+  "short_name": "e-TEP",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#F28C28",
+  "description": "An AI-powered simulator for the e-TEP exam.",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/G5i5t32.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.imgur.com/G5i5t32.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

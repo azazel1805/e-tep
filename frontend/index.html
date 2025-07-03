@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-TEP Exam</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff"/>
+</head>
+<body>
+
+    <header>
+        <img src="https://i.imgur.com/G5i5t32.png" alt="ÖSYM Logo" class="logo">
+        <h1>e-TEP Exam Simulator</h1>
+    </header>
+
+    <main id="app-container">
+        <!-- All dynamic content will be rendered here -->
+        <div class="welcome-screen">
+            <h2>Welcome to the e-TEP Exam Overview</h2>
+            <p>This simulator will generate new questions for each section using AI.</p>
+            <button id="start-exam-btn">Start Exam</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by Python, Gemini, and the Web Speech API</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

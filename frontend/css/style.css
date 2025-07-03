@@ -1,0 +1,28 @@
+/* Add your styling here, for brevity I'll keep it simple */
+body { font-family: sans-serif; margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+header { background: #fff; padding: 10px 20px; border-bottom: 1px solid #ddd; text-align: center; }
+.logo { height: 50px; vertical-align: middle; }
+main { flex: 1; padding: 20px; max-width: 900px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+footer { background: #f1f1f1; text-align: center; padding: 10px; font-size: 0.8em; }
+
+button {
+    background-color: #007bff; color: white; border: none; padding: 10px 20px;
+    border-radius: 5px; cursor: pointer; font-size: 1em;
+}
+button:hover { background-color: #0056b3; }
+.loader { border: 5px solid #f3f3f3; border-top: 5px solid #3498db; border-radius: 50%; width: 50px; height: 50px; animation: spin 2s linear infinite; margin: 20px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Reading Section Styles */
+.reading-container { display: flex; gap: 20px; }
+.reading-passage { flex: 2; border-right: 1px solid #ccc; padding-right: 20px; }
+.reading-questions { flex: 1; }
+.passage-p { margin-bottom: 1em; }
+.question-item { margin-bottom: 1.5em; }
+.options-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.options-grid label { text-align: center; }
+
+/* Speaking Section Styles */
+.speaking-container { text-align: center; border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+.mic-status { font-style: italic; color: #555; margin-top: 15px; }
+.mic-status.recording { color: red; font-weight: bold; }
