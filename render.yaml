@@ -3,28 +3,28 @@ services:
   - type: web
     name: etep-api
     env: python
-    runtime: python3
     region: oregon # or your preferred region
-    plan: free # use a paid plan for better performance
+    plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn app:app"
     rootDir: backend
+    healthCheckPath: /api/health # A simple health check endpoint we'll add
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.4
       - key: GEMINI_API_KEY
-        fromSecret: gemini_api_key # You will create this secret in Render's dashboard
+        fromSecret: true # Set to true to use a secret from an environment group
       - key: FLASK_ENV
         value: production
+      - key: FRONTEND_URL # For CORS
+        fromSecret: true 
 
   # The JavaScript Frontend PWA
-  - type: web
+  - type: static
     name: etep-frontend
-    env: static
-    region: oregon
-    plan: free
     rootDir: frontend
-    staticPublishPath: . # Serve from the root of the 'frontend' directory
+    plan: free
+    staticPublishPath: .
     routes:
       - type: rewrite
         source: /*
